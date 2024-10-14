@@ -36,10 +36,10 @@ async def weather_func(message: types.Message):
         wind = data1['wind']['speed']
 
         await message.answer(f'***{datetime.now().strftime("%Y-%m-%d %H:%M")}***\n'
-                             f'City: {city_name}\nTemperature: {temp}°C\n'
-                             f'Humidity: {humidity}%\nWind: {wind} m/s')
-    except Exception as ex:
-        await message.answer('Try again')
+                             f'Город: {city_name}\nТемпература: {temp}°C\n'
+                             f'Влажность: {humidity}%\nВетер: {wind} м/c')
+    except Exception:
+        await message.answer('Попробуйте еще раз')
 
 
 async def main():
